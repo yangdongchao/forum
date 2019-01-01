@@ -5,6 +5,10 @@ java课程项目 <br>
 所需知识: spring boot 配置 ；后端： java基础, servlet基础 ,spring 注入，spring AOP, spring MVC，前端：jsp+html+css+js,数据库：Hibernate+jdbc <br>
 
 # 下载
-git clone https://github.com/yangdongchao/forum.git
+需要密码
+	
+	git clone https://github.com/yangdongchao/forum.git
 
-git clone  git@github.com:yangdongchao/forum.git
+免密登录
+	
+	git clone  git@github.com:yangdongchao/forum.git
