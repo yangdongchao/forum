@@ -7,3 +7,4 @@ java课程项目 <br>
 # 下载
 git clone https://github.com/yangdongchao/forum.git
 
+git clone  git@github.com:yangdongchao/forum.git
