@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>小春论坛</title>
+<title>共享系统</title>
 </head>
 <body>
-    ${sessionScope.user.userName},欢迎您进入小春论坛，您当前积分为${sessionScope.user.credits};
+    ${sessionScope.user.userName},欢迎您进入上海大学考试资源共享系统，您当前积分为${sessionScope.user.credits};
 </body>
 </html>
