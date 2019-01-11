@@ -22,4 +22,5 @@ public class Constantion {
      * 每页的记录数
      */
     public static final int PAGE_SIZE = 20;
+    public static final int LIXIUWEN = 1;
 }
