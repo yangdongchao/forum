@@ -47,7 +47,6 @@ public class RegisterController  extends  BaseController{
 
             mv.addObject("success","注册成功，即将前往登录页面");
             mv.setViewName("login");
-
         }
         return  mv;
     }
