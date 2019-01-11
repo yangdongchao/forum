@@ -65,7 +65,7 @@ public class LoginController extends BaseController{
     public ModelAndView Index(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("index");
-        mv.addObject("index","hi");
+        mv.addObject("index","hi00000");
         return mv;
     }
 }
