@@ -28,25 +28,30 @@ public class LoginController extends BaseController{
         this.userServiceImp = userServiceImp;
     }
 
-    @RequestMapping("/login")
+    @RequestMapping("login")
     public ModelAndView login(HttpServletRequest request,User user){
-
+        System.out.println(user.getUserName());
         User dbUser = userServiceImp.getUserByName(user.getUserName());
-
+        System.out.println(dbUser);
+        System.out.println("login start");
         ModelAndView mv = new ModelAndView();
 
-        mv.setViewName("forward:/login.jsp");
+        mv.setViewName("login");
         if(dbUser==null){
+            System.out.println("1");
             mv.addObject("errorMsg","用户名不存在");
         }
         else if(!dbUser.getPassword().equals(user.getPassword())){
+            System.out.println("2");
             mv.addObject("errorMsg","密码错误");
         }
 
         else if(dbUser.getLocked()==User.user_locked){
+            System.out.println("'3");
             mv.addObject("errorMsg","该用户名已被锁定，请等待管理员解锁");
         }
         else{
+            System.out.println("'4");
             dbUser.setLastIp(request.getRemoteAddr());
             dbUser.setLastVisit(new Date());
             userServiceImp.loginSuccess(dbUser);
@@ -54,10 +59,12 @@ public class LoginController extends BaseController{
             String toUrl = (String)request.getSession().getAttribute(Constantion.LOGIN_TO_URL);//记忆化历史浏览记录
             request.getSession().removeAttribute(Constantion.LOGIN_TO_URL);
             if(toUrl==null){
-                toUrl = "index";
+                toUrl = "login";
             }
             mv.setViewName("redirect:"+toUrl);
         }
+       // mv.setViewName("redirect:index");
+        System.out.println(mv.getViewName());
         return mv;
     }
 
@@ -65,6 +72,14 @@ public class LoginController extends BaseController{
     public ModelAndView Index(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("index");
+        mv.addObject("index","hi00000");
+        return mv;
+    }
+
+    @RequestMapping("loginDo")
+    public ModelAndView log(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login");
         mv.addObject("index","hi00000");
         return mv;
     }

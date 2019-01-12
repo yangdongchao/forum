@@ -137,6 +137,7 @@ public class UserServiceImp implements UserService {
     @Override
     public void loginSuccess(User user) {
         LoginLog loginLog = new LoginLog(user.getUserId(),user.getLastIp(),new Date());
+        System.out.println(loginLog);
         loginLogDao.save(loginLog);//先保存登录日志
         updateCredits(user.getCredits()+5,user.getUserId());
     }
