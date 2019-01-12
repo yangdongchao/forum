@@ -191,65 +191,33 @@
 
 
 <body style="background-color: #F9F9F9;line-height: 1.5; color: #24292e;">
-<div class="div_container_top">
-    <div class="div_container_top_center">
-        <div class="div_logo">
-            <img src="https://github.com/fluidicon.png" style="width:53px;height:53px;margin-top:30px;">
-        </div>
-        <div class="div_word"style="margin-top:50px;">登录</div>
 
-    </div>
-</div>
-
-<!--输入框-->
-<div class="div_container_main">
-    <form class="div_container_main_center">
-        <div class="form-group">
-            <label>用户名</label>
-            <input type="text" id="username" class="form-control"  placeholder="username">
-        </div>
-
-        <div class="form-group">
-            <label>密码</label>
-            <input type="password" id="password" class="form-control" placeholder="Password">
-        </div>
-        <br>
-        <a type="submit" tabindex="0" id="login" class="btn btn-default center-block" role="button" data-toggle="popover" data-trigger="focus" data-content="密码和账户不可为空" style="width:100%">登录</a>
-        <br>
-        <a href="register.html" class="btn btn-default center-block" style="width:100%">没有账号 注册</a>
-
-        <!--button type="submit" class="btn btn-default">Submit</button-->
-    </form>
-</div>
-
-
+<input type="text" id="txt"/>
+<input type="button" value="检测" id="btn">
 <script>
-    var uu= document.getElementById('username');
-    var pp= document.getElementById('password');
-    var obtn = document.getElementById('login');
-    function isnull(val_1,val_2) {
-        console.log('sad');
-        var str = val_1.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
-        if (str == '' || str == undefined || str == null){
-            console.log("1");
-            $('#login').popover("show");
-            return ;
-        }
+    var oTxt = document.getElementById('txt');
 
-        str = val_2.replace(/(^\s*)|(\s*$)/g, '');
+    var oBtn = document.getElementById('btn');
+    function isnull(val) {
+
+        var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
 
         if (str == '' || str == undefined || str == null) {
-            console.log('2');
-            $('#login').popover("show");
-            return ;
+            //return true;
+            console.log('空')；
+        } else {
+            //return false;
+            console.log('非空');
         }
     }
-    obtn.onclick = function () {
-        isnull(uu.value,pp.value);
+
+    oBtn.onclick = function () {
+
+        isnull( oTxt.value );
+
     }
+
 </script>
-
-
 
 
 
