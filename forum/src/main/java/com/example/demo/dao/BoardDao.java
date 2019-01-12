@@ -1,6 +1,8 @@
 package com.example.demo.dao;
 
 import com.example.demo.domain.Board;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -27,4 +29,7 @@ public interface BoardDao extends JpaRepository<Board,Integer> {
     void updateBoardNumById(@Param("num") int num, @Param("id") int id);
 
     Board findByBoardId(int id);
+
+    @Override
+    Page<Board> findAll(Pageable pageable);
 }

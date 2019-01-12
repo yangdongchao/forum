@@ -1,5 +1,7 @@
 package com.example.demo.domain;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;

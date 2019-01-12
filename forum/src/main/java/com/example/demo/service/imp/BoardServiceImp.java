@@ -4,6 +4,9 @@ import com.example.demo.dao.BoardDao;
 import com.example.demo.domain.Board;
 import com.example.demo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -74,6 +77,12 @@ public class BoardServiceImp implements BoardService {
     public void updateBoardTopicNum(int num, int id) {
         boardDao.updateBoardNumById(num,id);
         boardDao.flush();
+    }
+
+    @Override
+    public Page<Board> getBoardPage(int pageNum, int pageSize) {
+        PageRequest pageable = new PageRequest(pageNum-1,pageSize,Sort.Direction.ASC,"topicNum");
+        return boardDao.findAll(pageable);
     }
 
     @Autowired

@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Board;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -24,5 +25,5 @@ public interface BoardService {
 
     void updateBoardTopicNum(int num,int id);
 
-
+    Page<Board> getBoardPage(int pageNum,int pageSize);
 }
