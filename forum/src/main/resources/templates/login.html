@@ -230,16 +230,16 @@
     function isnull(val_1,val_2) {
         console.log('sad');
 
-        var str = val_1.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
-
+        //var str = val_1.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+        var str = val_1;
         if (str == '' || str == undefined || str == null){
             console.log("1");
             $('#username').popover("show");
             return ;
         }
 
-        str = val_2.replace(/(^\s*)|(\s*$)/g, '');
-
+        //str = val_2.replace(/(^\s*)|(\s*$)/g, '');
+        str = val_2;
         if (str == '' || str == undefined || str == null) {
             console.log('2');
             $('#password').popover("show");
