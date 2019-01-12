@@ -206,15 +206,15 @@
     <form class="div_container_main_center">
         <div class="form-group">
             <label>用户名</label>
-            <input type="text" id="username" class="form-control"  placeholder="username">
+            <input type="text" id="username" class="form-control"  placeholder="username" data-toggle="popover" data-trigger="focus" data-content="账户不可为空">
         </div>
 
         <div class="form-group">
             <label>密码</label>
-            <input type="password" id="password" class="form-control" placeholder="Password">
+            <input type="password" id="password" class="form-control" placeholder="Password" data-toggle="popover" data-trigger="focus" data-content="密码不可为空">
         </div>
         <br>
-        <a type="submit" tabindex="0" id="login" class="btn btn-default center-block" role="button" data-toggle="popover" data-trigger="focus" data-content="密码和账户不可为空" style="width:100%">登录</a>
+        <a type="submit" tabindex="0" id="login" class="btn btn-default center-block" style="width:100%">登录</a>
         <br>
         <a href="register.html" class="btn btn-default center-block" style="width:100%">没有账号 注册</a>
 
@@ -229,10 +229,12 @@
     var obtn = document.getElementById('login');
     function isnull(val_1,val_2) {
         console.log('sad');
+
         var str = val_1.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+
         if (str == '' || str == undefined || str == null){
             console.log("1");
-            $('#login').popover("show");
+            $('#username').popover("show");
             return ;
         }
 
@@ -240,9 +242,12 @@
 
         if (str == '' || str == undefined || str == null) {
             console.log('2');
-            $('#login').popover("show");
-            return ;
+            $('#password').popover("show");
+            return;
         }
+
+        $('#password').popover("destroy");
+        $('#username').popover("destroy");
     }
     obtn.onclick = function () {
         isnull(uu.value,pp.value);

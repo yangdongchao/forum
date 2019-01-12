@@ -207,18 +207,18 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol
 <form class="div_container_main_center">
     <div class="form-group">
         <label>用户名</label>
-        <input type="text" class="form-control"  placeholder="username">
+        <input type="text" id="username" class="form-control"  placeholder="username">
     </div>
     <div class="form-group">
         <label>密码</label>
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" id="password" class="form-control" placeholder="Password">
     </div>
     <div class="form-group">
         <label>确认密码</label>
-        <input type="password" class="form-control" placeholder="ConfirmPassword">
+        <input type="password" id="rpassword" class="form-control" placeholder="ConfirmPassword">
     </div>
     <br>
-    <button type="submit" class="btn btn-default center-block" style="width:100%">注册</button>
+    <button type="submit" id="reg" class="btn btn-default center-block" style="width:100%">注册</button>
     <br>
     <a href="login.html" class="btn btn-default center-block" style="width:100%">已有账号 登录</a>
 
@@ -227,7 +227,36 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol
 </div>
 
 
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">可消失的弹出框</a>
+<script>
+    var uu= document.getElementById('username');
+    var pp= document.getElementById('password');
+    var obtn = document.getElementById('login');
+    function isnull(val_1,val_2) {
+        console.log('sad');
+
+        var str = val_1.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+
+        if (str == '' || str == undefined || str == null){
+            console.log("1");
+            $('#username').popover("show");
+            return ;
+        }
+
+        str = val_2.replace(/(^\s*)|(\s*$)/g, '');
+
+        if (str == '' || str == undefined || str == null) {
+            console.log('2');
+            $('#password').popover("show");
+            return;
+        }
+
+        $('#password').popover("destroy");
+        $('#username').popover("destroy");
+    }
+    obtn.onclick = function () {
+        isnull(uu.value,pp.value);
+    }
+</script>
 
 
 
