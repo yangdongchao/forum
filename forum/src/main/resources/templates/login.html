@@ -1,182 +1,194 @@
 <!DOCTYPE html>
-<html>
-<meta http-equiv="Content-Type"content="text/html";charset="utf-8"/>
-<title>Sign in to GitHub</title>
-<link href="https://assets-cdn.github.com/favicon.ico" rel="Shortcut Icon"  type="image/x-icon" />
-
+<html lang="zh-CN">
 <head>
-    <style>
-        .div_container_top{
-            width:100%;
-        }
-
-        .div_container_top_center{
-            width:310px;
-            height:150px;
-            margin:0 auto;
-        }
-
-        .div_logo{
-            width:53px;
-            height:53px;
-            margin:0 auto;
-        }
-
-        .div_word{
-            width:310px;
-            margin:0 auto;
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: -0.5px;
-            text-align:center;
-        }
-
-        .div_container_main{
-            width:100%;
-        }
-
-        .div_container_main_center{
-            width:310px;
-            height:235px;
-            margin:0 auto;
-            background-color:#FFF;
-            border: 1px solid #d8dee2;
-            border-radius: 5px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .div_main_first{
-            width:100%;
-            height:20px;
-
-        }
-        .div_first_word{
-            font-size: 13px;
-            color:black;
-            font-weight:bold;
-            float:left;
-
-        }
-        .div_main_second{
-            width:100%;
-            height:40px;
-        }
-
-        .div_main_third{
-            width:100%;
-            height:30px;
-            margin-top:10px;
-        }
-        .div_chat_top_word1{
-            font-size: 16px;
-            font-weight:600;
-            float:left;
-        }
-        .div_chat_top_word2{
-            font-size: 12px;
-            color:#0366d6;
-            font-weight:600;
-            float:right;
-        }
-
-        .div_main_fouth{
-            width:100%;
-            height:40px;
-
-        }
-
-        .search{
-        //width:135px;
-            height:20px;
-            float:right;
-            margin:0 auto;
-        }
-
-        .div_main_fifth{
-            width:100%;
-            height:40px;
-
-        }
-        .div_fifth_button{
-            margin-top:8px;
-            padding:8px 12px;
-            font-size:14px;
-            font-weight:600;
-            line-height:20px;
-            border:1px solid rgba(27,31,35,0.2);
-            width:248px;
-        //color:white;
-            background-color:#269f42;
-            background-image: linear-gradient(-180deg,#34d058 0%,#28a745 90%);
-            border-radius: 0.25em;
-            text-align:center;
-
-        }
-        .div_foot{
-            margin-top:20px;
-            width:100%;
-            height:100px;
-        }
-        .div_foot_main{
-            width:310px;
-            height:90px;
-            margin:0 auto;
-            background-color:#F9F9F9;
-        }
-        .div_sixth{
-            width:310px;
-            height:50px;
-            background-color:#F9F9F9;
-            color:#0366D6;
-            border:1px solid #D8DEE2;
-            border-radius: 0.25em;
-            text-align:center;
-        }
-        .div_sixth_word1{
-            width:150px;
-            text-align:center;
-        //margin:0 auto;
-            color: #d8dee2;
-            float:left;
-            margin-top:10px;
-        }
-        .div_sixth_word2{
-            width:150px;
-            text-align:center;
-        //margin:0 auto;
-            color:#0366d6;
-            float:right;
-            margin-top:10px;
-        }
-        .div_foot_tail{
-            width:310px;
-            height:30px;
-            background-color:#F9F9F9;
-            text-align:center;
-            margin:0 auto;
-
-        }
-        .div_foot_word{
-            margin-top:10px;
-            width:50px;
-            height:15px;
-            text-align:center;
-            font-size:6px;
-            margin-left:10px;
-            float:left;
-        }
-        .div_foot_word2{
-            margin-top:10px;
-            width:90px;
-            height:15px;
-            text-align:center;
-            font-size:6px;
-            margin-left:20px;
-            float:left;
-        }
-    </style>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
 </head>
+<style>
+    .div_container_top{
+        width:100%;
+    }
+
+    .div_container_top_center{
+        width:310px;
+        height:150px;
+        margin:0 auto;
+    }
+
+    .div_logo{
+        width:53px;
+        height:53px;
+        margin:0 auto;
+    }
+
+    .div_word{
+        width:310px;
+        margin:0 auto;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+        text-align:center;
+    }
+
+    .div_container_main{
+        width:100%;
+    }
+
+    .div_container_main_center{
+        width:350px;
+        height:300px;
+        margin:0 auto;
+        background-color:#FFF;
+        border: 1px solid #d8dee2;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .div_main_first{
+        width:100%;
+        height:20px;
+
+    }
+    .div_first_word{
+        font-size: 13px;
+        color:black;
+        font-weight:bold;
+        float:left;
+
+    }
+    .div_main_second{
+        width:100%;
+        height:40px;
+    }
+
+    .div_main_third{
+        width:100%;
+        height:30px;
+        margin-top:10px;
+    }
+    .div_chat_top_word1{
+        font-size: 16px;
+        font-weight:600;
+        float:left;
+    }
+    .div_chat_top_word2{
+        font-size: 12px;
+        color:#0366d6;
+        font-weight:600;
+        float:right;
+    }
+
+    .div_main_fouth{
+        width:100%;
+        height:40px;
+
+    }
+
+    .search{
+    //width:135px;
+        height:20px;
+        float:right;
+        margin:0 auto;
+    }
+
+    .div_main_fifth{
+        width:100%;
+        height:40px;
+
+    }
+    .div_fifth_button{
+        margin-top:8px;
+        padding:8px 12px;
+        font-size:14px;
+        font-weight:600;
+        line-height:20px;
+        border:1px solid rgba(27,31,35,0.2);
+        width:248px;
+    //color:white;
+        background-color:#269f42;
+        background-image: linear-gradient(-180deg,#34d058 0%,#28a745 90%);
+        border-radius: 0.25em;
+        text-align:center;
+
+    }
+    .div_foot{
+        margin-top:20px;
+        width:100%;
+        height:100px;
+    }
+    .div_foot_main{
+        width:310px;
+        height:90px;
+        margin:0 auto;
+        background-color:#F9F9F9;
+    }
+    .div_sixth{
+        width:310px;
+        height:50px;
+        background-color:#F9F9F9;
+        color:#0366D6;
+        border:1px solid #D8DEE2;
+        border-radius: 0.25em;
+        text-align:center;
+    }
+    .div_sixth_word1{
+        width:150px;
+        text-align:center;
+    //margin:0 auto;
+        color: #d8dee2;
+        float:left;
+        margin-top:10px;
+    }
+    .div_sixth_word2{
+        width:150px;
+        text-align:center;
+    //margin:0 auto;
+        color:#0366d6;
+        float:right;
+        margin-top:10px;
+    }
+    .div_foot_tail{
+        width:310px;
+        height:30px;
+        background-color:#F9F9F9;
+        text-align:center;
+        margin:0 auto;
+
+    }
+    .div_foot_word{
+        margin-top:10px;
+        width:50px;
+        height:15px;
+        text-align:center;
+        font-size:6px;
+        margin-left:10px;
+        float:left;
+    }
+    .div_foot_word2{
+        margin-top:10px;
+        width:90px;
+        height:15px;
+        text-align:center;
+        font-size:6px;
+        margin-left:20px;
+        float:left;
+    }
+</style>
+
+
 
 <body style="background-color: #F9F9F9;line-height: 1.5; color: #24292e;">
 <div class="div_container_top">
@@ -184,65 +196,41 @@
         <div class="div_logo">
             <img src="https://github.com/fluidicon.png" style="width:53px;height:53px;margin-top:30px;">
         </div>
-        <div class="div_word"style="margin-top:50px;">SHU 信息共享系统
-        </div>
+        <div class="div_word"style="margin-top:50px;">登录</div>
+
     </div>
 </div>
 
 <!--输入框-->
 <div class="div_container_main">
-    <div class="div_container_main_center">
-        <div class="div_main_first">
-            <div class="div_first_word">
-                用户名
-            </div>
+    <form class="div_container_main_center">
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="text" class="form-control"  placeholder="username">
         </div>
 
-        <form action = "/login" method="get">
-            <div class="div_main_second">
-                <div class="search"style="float:left;">
-                        <input id="usename" name="userName"  type="text" style="width:270px;height:30px;
-                                        border:1px #d1d5da solid;border-radius:3px; " placeholder="输入用户名">
-                </div>
-            </div>
-            <div class="div_main_third">
-                <div class="div_chat_top_word1">
-                    密码
-                </div>
-                <div class="div_chat_top_word2">
-                    忘记密码
-                </div>
-            </div>
-            <div class="div_main_fouth">
-                <div class="search"style="float:left;">
-                        <input id="pwd" name="password"  type="password" style="width:270px;height:30px;
-                                        border:1px #d1d5da solid;border-radius:3px; " placeholder="输入用户密码">
-                </div>
-            </div>
-
-            <div class="div_main_fifth">
-                <div class="div_fifth_button">
-                    <input type="submit" class="div_chat_button" style="color:white;text-decoration: none;" value="登录">
-                </div>
-            </div>
-        </form>
-
-
-    </div>
-
-</div>
-<div class="div_foot">
-    <div class="div_foot_main">
-        <div class="div_sixth">
-            <div class="div_sixth_word1">
-                首次访问?
-            </div>
-            <div class="div_sixth_word2">
-                <a href = "register.html">注册</a>
-            </div>
+        <div class="form-group">
+            <label>密码</label>
+            <input type="password" class="form-control" placeholder="Password">
         </div>
+        <br>
+        <button type="submit" class="btn btn-default center-block" style="width:100%">登录</button>
+        <br>
+        <a href="register.html" class="btn btn-default center-block" style="width:100%">没有账号 注册</a>
 
-    </div>
+        <!--button type="submit" class="btn btn-default">Submit</button-->
+    </form>
 </div>
-    </body>
+
+
+
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+
 </html>
