@@ -54,7 +54,7 @@ public class LoginController extends BaseController{
             String toUrl = (String)request.getSession().getAttribute(Constantion.LOGIN_TO_URL);//记忆化历史浏览记录
             request.getSession().removeAttribute(Constantion.LOGIN_TO_URL);
             if(toUrl==null){
-                toUrl = "/index.templates";
+                toUrl = "index";
             }
             mv.setViewName("redirect:"+toUrl);
         }

@@ -23,6 +23,6 @@ public class Constantion {
      */
     public static final int PAGE_SIZE = 20;
     public static final int LIXIUWEN = 1;
-    
+
     public static final int forum = 1;
 }
