@@ -246,8 +246,8 @@
             return;
         }
 
-        $('#password').popover("hide");
-        $('#username').popover("hide");
+        $('#password').popover("destroy");
+        $('#username').popover("destroy");
     }
     obtn.onclick = function () {
         isnull(uu.value,pp.value);

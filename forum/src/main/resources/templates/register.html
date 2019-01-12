@@ -243,17 +243,17 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol
             return ;
         }
 
-        str = val_2.replace(/(^\s*)|(\s*$)/g, '');
+        var str1 = val_2.replace(/(^\s*)|(\s*$)/g, '');
 
-        if (str == '' || str == undefined || str == null) {
+        if (str1 == '' || str1 == undefined || str1 == null) {
             console.log('2');
             $('#password').popover("show");
             return;
         }
 
-        str = val_3.replace(/(^\s*)|(\s*$)/g, '');
+        var str2 = val_3.replace(/(^\s*)|(\s*$)/g, '');
 
-        if (str == '' || str == undefined || str == null) {
+        if (str2 == '' || str2 == undefined || str2 == null || str1!=str2) {
             console.log('3');
             $('#rpassword').popover("show");
             return;
