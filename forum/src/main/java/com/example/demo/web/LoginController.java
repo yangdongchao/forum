@@ -63,7 +63,6 @@ public class LoginController extends BaseController{
             }
             mv.setViewName("redirect:"+toUrl);
         }
-       // mv.setViewName("redirect:index");
         System.out.println(mv.getViewName());
         return mv;
     }
